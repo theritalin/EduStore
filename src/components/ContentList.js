@@ -8,8 +8,6 @@ function ContentList({ signer }) {
   const [contents, setContents] = useState([]);
   const [purchasedContentIds, setPurchasedContentIds] = useState([]);
 
-
-
   useEffect(() => {
     async function fetchContents() {
       if (signer) {
@@ -93,7 +91,7 @@ function ContentList({ signer }) {
                         : "N/A"}{" "}
                       ETH
                     </p>
-              
+
                     <button
                       className="btn btn-success"
                       onClick={() => handleDownload(content.cid)}
@@ -123,12 +121,12 @@ function ContentList({ signer }) {
                     {content.price && content.price !== "0"
                       ? ethers.utils.formatEther(content.price)
                       : "N/A"}{" "}
-                    ETH
+                    EDU
                   </p>
                   <p className="card-author">
                     Uploaded by: {content.author ? content.author : "Unknown"}
                   </p>
-            
+
                   {purchasedContentIds.includes(content.id) ? (
                     <button
                       className="btn btn-success"

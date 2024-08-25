@@ -10,6 +10,7 @@ function AddContent({ signer, refreshContents }) {
   const [price, setPrice] = useState("");
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [priceError, setPriceError] = useState("");
 
   const toggleModal = () => setIsOpen(!isOpen);
 
@@ -33,10 +34,25 @@ function AddContent({ signer, refreshContents }) {
     }
   };
 
+  const handlePriceChange = (e) => {
+    const value = e.target.value;
+    if (/^[0-9]*\.?[0-9]*$/.test(value)) {
+      setPrice(value);
+      setPriceError("");
+    } else {
+      setPriceError("Please use '.' as the decimal separator.");
+    }
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!signer) {
       alert("Please connect your wallet first.");
+      return;
+    }
+
+    if (priceError) {
+      alert("Please correct the price format.");
       return;
     }
 
@@ -97,13 +113,14 @@ function AddContent({ signer, refreshContents }) {
                 />
               </div>
               <div className="form-group">
-                <label>Price (in ETH):</label>
+                <label>Price (in EDU):</label>
                 <input
-                  type="number"
+                  type="text"
                   value={price}
-                  onChange={(e) => setPrice(e.target.value)}
+                  onChange={handlePriceChange}
                   required
                 />
+                {priceError && <p style={{ color: "red" }}>{priceError}</p>}
               </div>
               <div className="form-group">
                 <label>Upload File:</label>

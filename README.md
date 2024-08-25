@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# EduStore DApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EduStore is a decentralized application where users can upload, purchase, and download educational content. This project was developed for the OpenCampus hackathon on Dorahacks and is integrated with Web3 technologies.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Content Uploading**: Users can upload educational content to the platform.
+- **Purchasing**: Users can purchase content on the platform using EDU tokens.
+- **Downloading**: Purchased content can be downloaded by users.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Follow the steps below to set up and run the project:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 1. Clone the Repository
 
-### `npm test`
+```bash
+git clone https://github.com/theritalin/EduStore
+cd EduStore
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Install Dependencies
 
-### `npm run build`
+```bash
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Setup Env
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create .env file
 
-### `npm run eject`
+```bash
+PINATA_API_KEY=your_pinata_api_key
+PINATA_SECRET_API_KEY=your_pinata_secret_api_key
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 4. Start Server and Bakend Server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm start
+node src/server.js
+```
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Connect Wallet: Ensure your wallet is connected for the application to function properly.
+Upload Content: Click the "UPLOAD +" button to add new content.
+Purchase: Buy the content you're interested in using EDU tokens.
+Download: Download and view the content you have purchased.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies
 
-### Code Splitting
+React: Frontend library
+Solidity: Smart contract language
+Ethers.js: Ethereum wallet and blockchain interaction
+IPFS: Decentralized file storage
+Pinata: IPFS management and file uploading
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Smart Contract
 
-### Analyzing the Bundle Size
+The project operates on a smart contract developed on Open Campus Codex, enabling the uploading, purchasing, and verification of educational content.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contract: 0x62e67d0750506098E4a3359Af65A213b34D98f98
+Explorer: https://opencampus-codex.blockscout.com/address/0x62e67d0750506098E4a3359Af65A213b34D98f98
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If you would like to contribute, please submit a pull request. We welcome all feedback and suggestions.
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-### Deployment
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any questions about this project, feel free to reach out.
