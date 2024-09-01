@@ -66,6 +66,11 @@ The project operates on a smart contract developed on Open Campus Codex, enablin
 Contract: 0x62e67d0750506098E4a3359Af65A213b34D98f98
 Explorer: https://opencampus-codex.blockscout.com/address/0x62e67d0750506098E4a3359Af65A213b34D98f98
 
+## Demo
+
+https://github.com/user-attachments/assets/97eaf7af-1eab-4094-ab0f-cd47f25df3f3
+
+
 ## Contributing
 
 If you would like to contribute, please submit a pull request. We welcome all feedback and suggestions.
