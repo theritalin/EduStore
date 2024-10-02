@@ -21,7 +21,7 @@ function AddContent({ signer, refreshContents }) {
     data.append("file", file);
 
     try {
-      const res = await fetch("http://localhost:4000/upload", {
+      const res = await fetch("http://65.109.236.138:4000/upload", {
         method: "POST",
         body: data,
       });
