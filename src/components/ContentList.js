@@ -67,7 +67,7 @@ function ContentList({ signer }) {
   };
 
   const handleDownload = (cid) => {
-    const downloadUrl = `http://localhost:4000/download/${cid}`;
+    const downloadUrl = `http://65.109.236.138:4000/download/${cid}`;
     window.open(downloadUrl, "_blank");
   };
 
